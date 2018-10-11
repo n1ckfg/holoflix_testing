@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Holoflix_mtl
-  m_Shader: {fileID: 4800000, guid: 4c27b1801585849248fde903f5477761, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
+  m_Shader: {fileID: 4800000, guid: 10f2f03952b94cf499b417fbe34a4874, type: 3}
+  m_ShaderKeywords: ENABLE_SOFTSLICING _EMISSION
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -34,16 +34,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _DispTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 15200000, guid: 757d955fd50cffa47a07193238a9178b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -58,31 +54,41 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ParticleTex:
+        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _BaselineLength: 0.3
+    - _Amount: 0.27
     - _BumpScale: 1
-    - _ClipRange: 0.8
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _Displacement: -0.01
+    - _Displacement: 1
     - _DstBlend: 0
-    - _FocalLength: 93.03
-    - _GlossMapScale: 1
+    - _ForcedPerspective: 1
+    - _GeometryFallback: 1
+    - _GeometryHolovid: 1
     - _Glossiness: 0.5
-    - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
+    - _ParticleSize: 1
+    - _ParticleUV: 0.3
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
+    - _brightnessMod: 1
+    - _depthUVh: 0.6666667
+    - _depthUVw: 0.5
+    - _depthUVx: 0
+    - _depthUVy: 0.16666667
+    - _imageUVh: 0.6666667
+    - _imageUVw: 0.5
+    - _imageUVx: 0.5
+    - _imageUVy: 0.16666667
+    - _softSlicingToggle: 1
     m_Colors:
-    - _ChannelFactor: {r: 1, g: 0, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Ctl: {r: 0, g: 0, b: 0, a: 1}
-    - _DispChannelFactor: {r: 1, g: 0, b: 0, a: 1}
+    - _Dims: {r: 0.40249878, g: 0.7266667, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Range: {r: 0, g: 0.5, b: 0, a: 1}
