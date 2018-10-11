@@ -10,7 +10,7 @@ using System.Collections.Generic;
 //creates a sufficiently dense mesh for the displacement
 
 [ExecuteInEditMode]
-public class holoflixMesh : MonoBehaviour {
+public class holoflixMesh_Custom : MonoBehaviour {
 
 	public int meshResX = 200;
 	public int meshResY = 200;
@@ -21,11 +21,11 @@ public class holoflixMesh : MonoBehaviour {
 	[Tooltip ("The pixel width/heigt of the color portion of the movie.")]
 	public Vector2 rgbDim;
 
-	public Material depthMovieMaterial;
+	[HideInInspector] public Material depthMovieMaterial;
 
-	public UnityEngine.UI.Slider depthSlider;
-	public UnityEngine.UI.Slider perspSlider;
-	public UnityEngine.UI.Slider sizeSlider;
+	//public UnityEngine.UI.Slider depthSlider;
+	//public UnityEngine.UI.Slider perspSlider;
+	//public UnityEngine.UI.Slider sizeSlider;
 
 	protected MovieTexture movie = null;
 	protected AudioSource audioSrc = null;
@@ -40,13 +40,18 @@ public class holoflixMesh : MonoBehaviour {
 	//but this leaves us no way to know that the fallback is being used. Among several possible hacks/workarounds, this is the one I found most stable.
 	//We just detect failed shader.isSupported, and manage the falling back ourselves.
 	Shader currentShader;
-	public Shader holovidShader;
-	public Shader particleShader;
-	public Shader particleAdditiveShader;
-	public Shader particleCutoutShader;
-	public Shader particleFallbackShader;
-	public Shader particleAdditiveFallbackShader;
-	public Shader particleCutoutFallbackShader;
+
+	[HideInInspector] public Shader holovidShader;
+	[HideInInspector] public Shader particleShader;
+	[HideInInspector] public Shader particleAdditiveShader;
+	[HideInInspector] public Shader particleCutoutShader;
+	[HideInInspector] public Shader particleFallbackShader;
+	[HideInInspector] public Shader particleAdditiveFallbackShader;
+	[HideInInspector] public Shader particleCutoutFallbackShader;
+
+	public float depth = 1f;
+	public float persp = 1f;
+	public float size = 1f;
 
 	//internal mesh generating stuff.  These are member variables to prevent tons of GC allocation
 	List<Vector3> verts = null;
@@ -66,6 +71,13 @@ public class holoflixMesh : MonoBehaviour {
 	int _currentResY = 0;
 	Shader _lastShader = null;
 
+	private Renderer ren;
+
+	private void Awake()
+	{
+		ren = GetComponent<Renderer>();
+	}
+
 	void Start()
 	{
 		checkShaders (); //just for safety.
@@ -74,9 +86,9 @@ public class holoflixMesh : MonoBehaviour {
 		{
 			if (!movie) 
 			{
-				Renderer r = GetComponent<Renderer>();
-				if (r)
-					movie = (MovieTexture)r.material.mainTexture;
+				//Renderer r = GetComponent<Renderer>();
+				if (ren)
+					movie = (MovieTexture) ren.material.mainTexture;
 			}
 
 			if (movie) 
@@ -88,7 +100,7 @@ public class holoflixMesh : MonoBehaviour {
 			}
 		}
 
-		sliderChanged (); //start with whatever values the sliders have
+		sliderChanged(); //start with whatever values the sliders have
 	}
 
 
@@ -127,11 +139,11 @@ public class holoflixMesh : MonoBehaviour {
 
 	}
 		
-	public void sliderChanged()
+	private void sliderChanged()
 	{
-		GetComponent<Renderer>().sharedMaterial.SetFloat("_Displacement", depthSlider.value);
-		GetComponent<Renderer>().sharedMaterial.SetFloat("_ForcedPerspective", perspSlider.value);
-		GetComponent<Renderer>().sharedMaterial.SetFloat ("_ParticleSize", sizeSlider.value);
+		ren.sharedMaterial.SetFloat("_Displacement", depth);//Slider.value);
+		ren.sharedMaterial.SetFloat("_ForcedPerspective", persp);//Slider.value);
+		ren.sharedMaterial.SetFloat ("_ParticleSize", size);//Slider.value);
 	}
 
 	void updateSettings()
@@ -247,6 +259,8 @@ public class holoflixMesh : MonoBehaviour {
 	
 	void Update()
 	{
+		sliderChanged();
+
 		checkShaders ();
 
 		meshResX = Mathf.Clamp (meshResX, 1, 255);
