@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114000011054508414}
   - component: {fileID: 114857442616819430}
   m_Layer: 0
-  m_Name: Holoflix
+  m_Name: Holoflix_Custom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

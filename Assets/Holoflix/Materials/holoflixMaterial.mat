@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: holoflixMaterial
-  m_Shader: {fileID: 4800000, guid: a34c45d0625e9a14387774ca77000419, type: 3}
+  m_Shader: {fileID: 4800000, guid: 2081742e7930c41889e349f4dbc3ffbf, type: 3}
   m_ShaderKeywords: ENABLE_SOFTSLICING _EMISSION
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
@@ -73,7 +73,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _ParticleSize: 0.137
+    - _ParticleSize: 1
     - _ParticleUV: 0.3
     - _SrcBlend: 1
     - _UVSec: 0
