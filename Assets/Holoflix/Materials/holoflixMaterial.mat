@@ -78,6 +78,7 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
+    - _brightnessMod: 1
     - _depthUVh: 0.6666667
     - _depthUVw: 0.5
     - _depthUVx: 0

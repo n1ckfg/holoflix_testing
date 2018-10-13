@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1083677643}
-  m_IndirectSpecularColor: {r: 0.15050837, g: 0.16486326, b: 0.19024307, a: 1}
+  m_IndirectSpecularColor: {r: 0.019353788, g: 0.022887291, b: 0.03053094, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -238,7 +238,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 1
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -330,8 +330,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: file:///Users/nick/GitHub/HOLOFLIX/holoflix_testing/Assets/StreamingAssets/Comp
-    1.mp4
+  m_Url: file:///Users/nick/GitHub/HOLOFLIX/holoflix_testing/Assets/StreamingAssets/glitch.mp4
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
