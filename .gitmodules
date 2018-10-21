@@ -1,0 +1,3 @@
+[submodule "Assets/Holoflix"]
+	path = Assets/Holoflix
+	url = https://github.com/n1ckfg/Holoflix_Unity
