@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1083677643}
-  m_IndirectSpecularColor: {r: 0.019353788, g: 0.022887291, b: 0.03053094, a: 1}
+  m_IndirectSpecularColor: {r: 0.019353792, g: 0.022887295, b: 0.030530952, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -361,31 +361,31 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000012006072662, guid: 65180f77101004c3a9035ab3425daa94, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.04
+      value: 0.665
       objectReference: {fileID: 0}
     - target: {fileID: 4000012006072662, guid: 65180f77101004c3a9035ab3425daa94, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5.93
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000012006072662, guid: 65180f77101004c3a9035ab3425daa94, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1.61
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4000012006072662, guid: 65180f77101004c3a9035ab3425daa94, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000012006072662, guid: 65180f77101004c3a9035ab3425daa94, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.056696426
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000012006072662, guid: 65180f77101004c3a9035ab3425daa94, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000012006072662, guid: 65180f77101004c3a9035ab3425daa94, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.9983915
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4000012006072662, guid: 65180f77101004c3a9035ab3425daa94, type: 2}
       propertyPath: m_RootOrder
@@ -396,6 +396,32 @@ Prefab:
       propertyPath: depthMovieMaterial
       value: 
       objectReference: {fileID: 2100000, guid: e926f12a6ca724d6bb34064d879107ea, type: 2}
+    - target: {fileID: 328307751175321718, guid: 65180f77101004c3a9035ab3425daa94,
+        type: 2}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012006072662, guid: 65180f77101004c3a9035ab3425daa94, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012006072662, guid: 65180f77101004c3a9035ab3425daa94, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012006072662, guid: 65180f77101004c3a9035ab3425daa94, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012006072662, guid: 65180f77101004c3a9035ab3425daa94, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 23000012918230038, guid: 65180f77101004c3a9035ab3425daa94,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c215bee27b224fe44a1c4a917d0a8199, type: 2}
     m_RemovedComponents:
     - {fileID: 114857442616819430, guid: 65180f77101004c3a9035ab3425daa94, type: 2}
     - {fileID: 114000011054508414, guid: 65180f77101004c3a9035ab3425daa94, type: 2}
@@ -406,40 +432,3 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 23000012918230038, guid: 65180f77101004c3a9035ab3425daa94,
     type: 2}
   m_PrefabInternal: {fileID: 2138782919}
---- !u!1 &2138782921 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1000013925846234, guid: 65180f77101004c3a9035ab3425daa94,
-    type: 2}
-  m_PrefabInternal: {fileID: 2138782919}
---- !u!114 &2138782922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2138782921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d75eafbf1e9304be2b25320eef8831e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  meshResX: 53
-  meshResY: 200
-  imageRes: {x: 1, y: 1}
-  rgbCoord: {x: 0.5, y: 0}
-  rgbDim: {x: 1, y: 1}
-  depthMovieMaterial: {fileID: 2100000, guid: e926f12a6ca724d6bb34064d879107ea, type: 2}
-  depth: 1
-  persp: 1
-  size: 1
-  holovidShader: {fileID: 4800000, guid: 2081742e7930c41889e349f4dbc3ffbf, type: 3}
-  particleShader: {fileID: 4800000, guid: 16bcaadf60a9741fc867e1c8bc0a3c39, type: 3}
-  particleAdditiveShader: {fileID: 4800000, guid: 8dd0912a71cfd494f9ebffa09be31839,
-    type: 3}
-  particleCutoutShader: {fileID: 4800000, guid: 590639dd7e995a54cb20290d9bfb13db,
-    type: 3}
-  particleFallbackShader: {fileID: 4800000, guid: a34c45d0625e9a14387774ca77000419,
-    type: 3}
-  particleAdditiveFallbackShader: {fileID: 4800000, guid: a903a6fadee0f5a4696bbfc4d6e20f11,
-    type: 3}
-  particleCutoutFallbackShader: {fileID: 4800000, guid: 26f318b90836ffa45a8d3207f7e02efe,
-    type: 3}
